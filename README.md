@@ -2,7 +2,8 @@
 
 Пример: https://altayev.github.io/video-player/index.html
 
-##Ссылка на библиотеку:
+### Cсылка на библиотеку
+Библиотека: 
 https://github.com/devmanorg/video-player-jslib
 
 
