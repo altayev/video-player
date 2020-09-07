@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Видеоплеер</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
-  <style>
-    button {
-      border-style:none;
-      background-color:transparent;
-      color:white;
-      padding: 0.8%;
-      margin: 0.2%;
-    }
-    #player {
-      display: flex;
-      flex-direction: column;
-    }
+    <title>Видеоплеер</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <style>
+        .control-buttons {
+            display: flex;
+        }
 
-    .control-buttons {
-      display: flex;
-    }
+        .control-button {
+            border-style:none;
+            background-color:transparent;
+            color:white;
+            padding: 0.8%;
+            margin: 0.2%;
+            width: 20px;
+        }
 
-    .empty-div {
-      flex-grow: 6;
-    }
-  </style>
+        .empty-div {
+            flex-grow: 6;
+        }
+    </style>
 </head>
 <body>
-  <div id="player" style="width: 800px; height: 600px; background: black; box-shadow: 0 0 20px rgba(0,0,0,0.9);">
+<div id="player" style="display: flex; flex-direction: column; width: 800px; height: 600px; background: black; box-shadow: 0 0 20px rgba(0,0,0,0.9);">
     <div class="js-video-container" style="width: 100%; height: 100%">
-
     </div>
-    <!-- Here can be placed player controls: play and volume buttons -->
-    <div class="control-buttons" style="background-color: black;">
-        <button class="js-play-button" hidden>
-            <i class="fa fa-play" style="font-size:110%;" aria-hidden="true"></i>
+
+    <div class="control-buttons">
+        <button class="js-play-button control-button" hidden>
+            <i class="fa fa-play" style="font-size:100%;" aria-hidden="true"></i>
         </button>
-        <button class="js-pause-button" hidden>
+        <button class="js-pause-button control-button" hidden>
             <i class="fa fa-pause" style="font-size:110%;" aria-hidden="true"></i>
         </button>
-        <button class="js-volume-button" hidden>
+        <button class="js-volume-button control-button" hidden>
             <i class="fa fa-volume-off" style="font-size:125%;" aria-hidden="true"></i>
         </button>
-        <button class="js-mute-button" hidden>
+        <button class="js-mute-button control-button" hidden>
             <i class="fa fa-volume-up" style="font-size:125%;"  aria-hidden="true"></i>
         </button>
-      <div class="empty-div"></div>
-        <button class="js-fullscreen-button">
+        <div class="empty-div"></div>
+        <button class="js-fullscreen-button control-button">
             <i class="fa fa-expand" style="font-size:110%;" aria-hidden="true"></i>
         </button>
     </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
-  <script src="player.js"></script>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
+<script src="player.js"></script>
 
-  <script type="text/javascript">
+<script type="text/javascript">
     createPlayer({elementId: 'player'});
-  </script>
+</script>
 </body>
 </html>
